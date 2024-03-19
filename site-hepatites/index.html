@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hepatites Virais - CEVS RS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script src="script.js"></script>
+
+<body>
+    <header class="header">
+        <img src="img/logo.png" style="width: 10%" />
+        <nav class="div_nav">
+            <a href="index.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="texto_navbar">Menu</span>
+                </div>
+            </a>
+            <a href="arquivos.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">folder</span>
+                    <span class="texto_navbar">Arquivos</span>
+                </div>
+            </a>
+            <a href="tutoriais.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">smart_display</span>
+                    <span class="texto_navbar">Tutoriais</span>
+                </div>
+            </a>
+        </nav>
+
+        <div class="div_button" onclick="showContatos(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+            </svg>
+            <span class="texto_navbar" style="font-size: 18px">Entre em contato</span>
+        </div>
+        <div class="contatos" id="contatos">
+            <div class="div_contatos" onclick="event.stopPropagation()">
+                <span class="texto_secundario">Hepatites Virais CEVS/SES - RS</span>
+                <div class="div_email">
+                    <a href="mailto:hepatites@saude.rs.gov.br" title="Enviar e-mail para Hepatites Virais">
+                        <div class="div_button">
+                            <span class="material-symbols-outlined" style="color: #FFDE59">mail</span>
+                            <span id="textoParaCopiar">hepatites@saude.rs.gov.br</span>
+                        </div>
+                    </a>
+                    <div class="div_button" onclick="copiar()" title="Copiar E-mail">
+                        <span class="material-symbols-outlined"> content_copy </span>
+                        <div class="tooltip" id="tooltip">Copiado!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="div_infos">
+            <span class="titulo">Hepatites Virais</span>
+            <span class="texto_padrao">São doenças infecciosas que atingem o
+                fígado, causando alterações leves, moderadas
+                ou graves. Na maioria das vezes são infecções
+                assintomáticas, ou seja, não apresentam
+                sintomas. Porém, quando causadas pelos
+                vírus B e C, frequentemente se tornam
+                crônicas, podendo causar comprometimento
+                hepático, cirrose e carcinoma hepatocelular.
+                <br></br>A notificação das HV é obrigatória e regular (em até sete dias),
+                conforme Portaria GM/MS n.º 3.418, de 31 de agosto de 2022, que apresenta a Lista Nacional de Agravos de
+                Notificação Compulsória.
+            </span>
+            <span class="texto_padrao"></span>
+            <span class="texto_secundario">Hepatites Virais - Rio Grande do Sul:</span>
+            <div class="div_doencas">
+                <span class="texto_doencas" onclick="showHepatiteA(event)">Hepatite A</span>
+                <div class="div_background" id="hepatiteA">
+                    <div class="hepatiteA" onclick="event.stopPropagation()">
+                        <span class="titulo_modal">Hepatite A</span>
+                        <span class="texto_secundario">Definição de caso:</span>
+                        <span class="texto_padrao">Casos com confirmação laboratorial (anti-HAV IgM reagente) ou casos
+                            sintomáticos com <abbr title="Contato com caso laboratorial confirmado"><i>vínculo
+                                    epidemiológico;</i></abbr>​</span>
+                        <span class="texto_secundario">Sintomas:</span>
+                        <span class="texto_padrao">Náuseas, vômitos, diarreia, cefaleia, pele e olhos amarelados, urina
+                            escura. ​</span>
+                    </div>
+                </div>
+                <span class="texto_doencas" onclick="showHepatiteB(event)">Hepatite B</span>
+                <div class="div_background" id="hepatiteB">
+                    <div class="hepatiteB" onclick="event.stopPropagation()">
+                        <span class="titulo_modal">Hepatite B</span>
+                        <span class="texto_secundario">Definição de caso:</span>
+                        <span class="texto_padrao">Casos com confirmação laboratorial de doença ativa (crônica ou
+                            aguda): HBsAg reagente ou anti-HBc IgM reagente ou HBV-DNA
+                            detectável;​</span>
+                        <span class="texto_secundario">Sintomas:</span>
+                        <span class="texto_padrao">Cansaço, dores articulares, náuseas, vômito, urina escura,
+                            icterícia.​</span>
+                    </div>
+                </div>
+                <span class="texto_doencas" onclick="showHepatiteC(event)">Hepatite C</span>
+                <div class="div_background" id="hepatiteC">
+                    <div class="hepatiteC" onclick="event.stopPropagation()">
+                        <span class="titulo_modal">Hepatite C</span>
+                        <span class="texto_secundario">Definição de caso:</span>
+                        <span class="texto_padrao">Casos com confirmação laboratorial (incluindo cicatriz sorológica):
+                            anti-HCV
+                            reagente ou HCV-RNA detectável;​</span>
+                        <span class="texto_secundario">Sintomas:</span>
+                        <span class="texto_padrao">Em geral assintomática.​</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="titulo_painel">Análise Epidemiológica - Rio Grande do Sul:</span>
+            <div class="painel">
+                <div class="painel_epi">
+                    <iframe
+                        src="https://lookerstudio.google.com/embed/u/0/reporting/8ef5f0f5-b51c-4fa3-b7a3-2e85c8d9dfdf/page/p_jg2ifa0bbd"
+                        width="950" height="505" style="border:none;" allowFullScreen="" loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade" gap="20px"></iframe>
+                </div>
+            </div>
+            <div class="div_infos">
+                <span class="texto_secundario">Sistemas Utilizados</span>
+
+                <div class="div_doencas">
+                    <span class="texto_sistemas">
+                        <a href="https://portalsinan.saude.gov.br/" target="_blank" rel="noopener noreferrer"
+                            style="font-size: 16px">Portal Sinan - MS</a>
+                    </span>
+                    <span class="texto_sistemas">
+                        <a href="https://gal.riograndedosul.sus.gov.br/" target="_blank" rel="noopener noreferrer"
+                            style="font-size: 16px">GAL</a>
+                    </span>
+
+                    <span class="texto_sistemas">
+                        <a href="http://200.198.173.165/tabnet/" target="_blank" rel="noopener noreferrer"
+                            style="font-size: 16px">Tabnet - CEVS/SES - RS</a>
+                    </span>
+                    <span class="texto_sistemas"><a href="http://azt.aids.gov.br/" target="_blank"
+                            rel="noopener noreferrer" style="font-size: 16px">
+                            SICLOM</a>
+                    </span>
+                    <span class="texto_sistemas"><a href="http://sim.saude.gov.br/default.asp" target="_blank"
+                            rel="noopener noreferrer" style="font-size: 16px">
+                            SIM</a>
+                    </span>
+                </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <img src="img/rodape.png" style="width: 25%; height: 100%" />
+    </footer>
+</body>
+
+</html>

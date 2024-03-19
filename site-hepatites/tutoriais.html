@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hepatites Virais - CEVS RS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="imagem/png" href="img/logo.png" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<script src="script.js"></script>
+
+<body>
+    <header class="header">
+        <img src="img/logo.png" style="width: 10%" />
+        <nav class="div_nav">
+            <a href="index.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="texto_navbar">Menu</span>
+                </div>
+            </a>
+            <a href="arquivos.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">folder</span>
+                    <span class="texto_navbar">Arquivos</span>
+                </div>
+            </a>
+            <a href="tutoriais.html">
+                <div class="div_button">
+                    <span class="material-symbols-outlined">smart_display</span>
+                    <span class="texto_navbar">Tutoriais</span>
+                </div>
+            </a>
+        </nav>
+
+        <div class="div_button" onclick="showContatos(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+            </svg>
+            <span class="texto_navbar" style="font-size: 18px">Entre em contato</span>
+        </div>
+        <div class="contatos" id="contatos">
+            <div class="div_contatos" onclick="event.stopPropagation()">
+                <span class="texto_secundario">Hepatites Virais CEVS/SES - RS</span>
+                <div class="div_email">
+                    <a href="mailto:hepatites@saude.rs.gov.br" title="Enviar e-mail para Hepatites Virais">
+                        <div class="div_button">
+                            <span class="material-symbols-outlined" style="color: #FFDE59">mail</span>
+                            <span id="textoParaCopiar">hepatites@saude.rs.gov.br</span>
+                        </div>
+                    </a>
+                    <div class="div_button" onclick="copiar()" title="Copiar E-mail">
+                        <span class="material-symbols-outlined"> content_copy </span>
+                        <div class="tooltip" id="tooltip">Copiado!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+
+        <div>
+            <div class="div_listas">
+              <div>
+                <div class="botao" id="crs" onclick="abrirCRS()">CRS</div>
+                <div class="lista" id="divCRS">
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="" alt="" />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="" alt="" />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                  <div class="imagem_container">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src=""
+                        alt=""
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="botao" id="mun" onclick="abrirMun()">Município</div>
+                <div class="lista" id="divMun">
+                  <div class="imagem_container">
+                    <a
+                      href="https://www.cevs.rs.gov.br/upload/arquivos/201805/21150756-video-geracao-e-envio-de-lotes-no-sinan.mp4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="img/imgVideos/lotes.jpeg"
+                        alt="Geração e Envio de Lotes"
+                      />
+                      <div class="overlay">Reproduzir</div></a
+                    >
+                  </div>
+    
+                  <div class="imagem_container">
+                    <a
+                      href="https://www.cevs.rs.gov.br/upload/arquivos/201805/21150744-fluxo-de-retorno-de-notificacoes-do-sinan.mp4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="img/fluxo de retorno.png"
+                        alt="Fluxo de Retorno de Notificações do SINAN NET"
+                      />
+                      <div class="overlay">Reproduzir</div></a
+                    >
+                  </div>
+    
+                  <div class="imagem_container">
+                    <a
+                      href="https://www.cevs.rs.gov.br/upload/arquivos/201805/21150304-sisnet.mp4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="img/imgVideos/sisnet.png"
+                        alt="Configurações SISNET"
+                      />
+                      <div class="overlay">Reproduzir</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </main>
+    <footer class="footer">
+        <img src="img/rodape.png" style="width: 25%; height: 100%" />
+    </footer>
+</body>
+
+</html>
